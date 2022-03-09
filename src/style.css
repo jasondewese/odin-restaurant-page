@@ -4,16 +4,21 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #404040;
+    width: 100vw;
 }
 
 a {
-    
     color: black;
+}
+
+body {
+    background-image: url('Swee-tea2.jpg');
+    background-size: cover;
 }
 
 /*nav styling*/
 
-.nav {
+.nav, .footer {
     width: 100%;
     height: 100%;
     background-color: #fafafa;
@@ -21,6 +26,15 @@ a {
     display: flex;
     justify-content: center;
     
+}
+
+.nav {
+    z-index: 2;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
 }
 
 .navList {
@@ -46,10 +60,6 @@ a {
 /*end nav styling*/
 
 /*Home Tab Styling*/
-body {
-    height: 100vh;
-    width: 100vw;
-}
 
 h1 {
     height: 3rem;
@@ -61,7 +71,7 @@ h1 {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 2rem 1fr 3fr 2rem;
+    grid-template-rows: 2rem 5rem 1fr 2rem;
     gap: 3rem;
     align-items: center;
     justify-items: center;
@@ -70,8 +80,8 @@ h1 {
 
 
 .headline {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +110,7 @@ h1 {
     font-size: 1.5rem;
     border: 4px #166534 solid;
     border-radius: 20px;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .hours p, .location p{
@@ -137,7 +147,7 @@ h1 {
     justify-items: center;
     padding: 2rem;
     border-radius: 20px;
-    background-color: #fafafa;
+    background-color: rgba(250,250,250,0.9);
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2), -5px -5px 5px rgb(0, 0, 0, 0.2);
 }
 
