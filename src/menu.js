@@ -2,6 +2,10 @@ import {homeInit} from './homeInit.js';
 import {contactInit} from './contact.js';
 import {createNav} from './createNav.js';
 
+import Croffle from './Croffle.jpg';
+import Sweetea from './Swee-tea.jpg';
+import Unitea from './Uni-tea.jpg';
+
 const menuInit = () => {
     const content = document.getElementById('content');
     
@@ -18,6 +22,10 @@ const menuInit = () => {
 
         content.appendChild(nav);
         content.appendChild(menuItem);
+
+        const croffleImage = new Image();
+        croffleImage.src = Croffle;
+        menuItem.appendChild(croffleImage);
 
     document.querySelector('.homeLink').addEventListener('click', function() {
         homeInit();
