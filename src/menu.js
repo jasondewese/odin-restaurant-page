@@ -3,7 +3,7 @@ import {contactInit} from './contact.js';
 import {createNav} from './createNav.js';
 
 import croffleImage from './Croffle.jpg';
-import sweeTeaImage from './Swee-tea.jpg';
+import sweeTeaImage from './Swee-tea2.jpg';
 import uniTeaImage from './Uni-tea.jpg';
 
 const menuInit = () => {
@@ -16,11 +16,15 @@ const menuInit = () => {
 
         const nav = createNav();
 
+        const menuLabel = document.createElement('h1');
+        menuLabel.classList.add('menuLabel');
+        menuLabel.textContent = 'Menu';
+
         const menuWrapper = document.createElement('div');
         menuWrapper.classList.add('menuWrapper');
 
             const drinksWrapper = document.createElement('div');
-            drinksWrapper.classList.add('drinksWrapper');
+            drinksWrapper.classList.add('drinksWrapper', 'menuItem');
 
                 const drinksLabel = document.createElement('div');
                 drinksLabel.classList.add('drinksLabel');
@@ -57,11 +61,11 @@ const menuInit = () => {
             drinksWrapper.appendChild(sweeTea);
 
             const dessertWrapper = document.createElement('div');
-            dessertWrapper.classList.add('dessertWrapper');
+            dessertWrapper.classList.add('dessertWrapper', 'menuItem');
 
                 const dessertLabel = document.createElement('div');
                 dessertLabel.textContent = 'Dessert';
-                dessertLabel.classList.add('dessertList');
+                dessertLabel.classList.add('dessertsLabel');
 
                 const croffle = document.createElement('div');
                 croffle.textContent = 'croffle';
@@ -82,8 +86,18 @@ const menuInit = () => {
         menuWrapper.appendChild(drinksWrapper);
         menuWrapper.appendChild(dessertWrapper);
 
+        const footer = document.createElement('footer');
+        footer.textContent = 'This assignment is part of ';
+        footer.classList.add('footer');
+        const odinLink = document.createElement('a');
+        odinLink.textContent = 'The Odin Project';
+        odinLink.setAttribute('href', 'https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/restaurant-page');
+        footer.appendChild(odinLink);
+
     content.appendChild(nav);
+    content.appendChild(menuLabel);
     content.appendChild(menuWrapper);
+    content.appendChild(footer);
 
         /*
         const croffleImage = new Image();

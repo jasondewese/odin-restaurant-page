@@ -13,7 +13,7 @@ a {
 
 body {
     background-image: url('Swee-tea2.jpg');
-    background-size: cover;
+    background-size: 100%;
 }
 
 /*nav styling*/
@@ -22,10 +22,14 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fafafa;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     
+}
+
+.footer {
+    box-shadow: 0px -5px 5px rgb(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -51,7 +55,7 @@ body {
 .nav button {
     height: 100%;
     width: 100px;
-    background-color: #166534;
+    background-color: #14532d;
     color: #fafafa;
     border: none;
     border-radius: 10px;
@@ -59,12 +63,12 @@ body {
 }
 /*end nav styling*/
 
-/*Home Tab Styling*/
+
 
 h1 {
     height: 3rem;
     width: 500px;
-    color: #166534;
+    color: #14532d;
 }
 
 #content {
@@ -79,7 +83,7 @@ h1 {
 
 
 
-.headline {
+.headline, .menuLabel {
     font-size: 4rem;
     font-weight: 500;
     display: flex;
@@ -108,7 +112,7 @@ h1 {
     justify-items: center;
     font-weight: bold;
     font-size: 1.5rem;
-    border: 4px #166534 solid;
+    border: 4px #14532d solid;
     border-radius: 20px;
     padding: 2rem;
 }
@@ -151,24 +155,67 @@ h1 {
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2), -5px -5px 5px rgb(0, 0, 0, 0.2);
 }
 
-
-/*End Home Tab Styling*/
-
-/*Menu Tab Styling*/
-.menuItem {
-    display: flex;
-    justify-content: center;
+.drinksWrapper, .dessertWrapper {
+    min-width: 550px;
 }
-
-.menuItem > img {
-    width: 300px;
-    height: auto;
-}
-
 
 .menuWrapper img {
     width: 300px;
     height: auto;
 }
 
-/*End Menu Tab Styling*/
+.menuWrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: rgba(250,250,250,0.9);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2), -5px -5px 5px rgb(0, 0, 0, 0.2);
+    min-width: 575px;
+}
+
+.menuItem {
+    width: 60%;
+    font-size: 1.5rem;
+    border: 4px #14532d solid;
+    border-radius: 20px;
+    padding: 2rem;
+    
+}
+
+.drink, .dessert {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.menuLabel {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    min-width: 700px;
+}
+
+.drinksLabel, .dessertsLabel {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.drink, .dessert {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.drink img, .dessert img {
+    grid-area: 1 / 2 / -1 / -1;
+}
+
+.drink p, .dessert p {
+    font-size: 1rem;
+    font-weight: 400;
+}
