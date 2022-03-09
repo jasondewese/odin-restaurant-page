@@ -9,4 +9,7 @@ A project to practice using JavaScript to dynamically render a webpage while usi
 - How to use .gitignore to prevent node_modules/ from being pushed every time
 - How to use build scripts and --watch to simplify compiling the code
 - How to use JavaScript to dynamically load the inital DOM as well as update during use
-- Development dependencies vs project dependencies 
+- Development dependencies vs dependencies 
+- Use a common layout accross multiple tabs/screens
+- Background image sizing options and transparencies for content background
+- How to publish to github pages when bundled into dist folder
