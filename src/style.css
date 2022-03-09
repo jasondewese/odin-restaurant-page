@@ -242,3 +242,7 @@ h1 {
    align-items: center;
    gap: 2rem;
 }
+
+.contactInfo p {
+    text-align: center;
+}
